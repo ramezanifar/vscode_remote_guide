@@ -71,12 +71,12 @@ After confirming that this host is legitimate, SSH connection is established. Af
 to close the connection. Now it is time to connect from VSCode.
 ### SSH from VSCode to Linux
 First, we install the *Remote Development* extension in the VSCode.
-As a result, five extensions are added to the VSCode. One of them is *Remote-SSH*. A button is added to the left bottom of the VSCode window that allows us to access the relevent item s in the Command Palette:   
+As a result, five extensions are added to the VSCode. One of them is *Remote-SSH*. A button is added to the left bottom of the VSCode window that allows us to access the relevent items in the Command Palette:   
 ![Extensions](images/ssh_icon.JPG)   
 Second, we need to add the path of the SSH to the VSCode. 
 - Open the Command Palette (Ctrl+Shift+P)
 - Type `Open Settings (JSON)` and select it
-- In the opened json file add the path of the ssh.exe inside the git installation folder. For example:
+- In the opened json file add the path of the ssh.exe inside the git installation folder. For example:  
 `"remote.SSH.path": "C:\\Program Files\\Git\\usr\\bin\\ssh.exe"`
 
 Third, we establish the ssh connection to the remote machine. 
