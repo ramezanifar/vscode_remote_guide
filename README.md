@@ -4,12 +4,12 @@ Using VSCode to for remote support
 # A step by step guide to use Microsoft VSCode for remote support
 
 ## Intruduction
-Assume we have a fully fledged computer such as your laptop that has graphical capabilities. We would like to use this computer as a medium to get access to a remote computer that is headless. If you have used putty in windows to open a secure SSH connection to a Linux machine, this is very similar to that. But instead of putty we use VSCode. From VSCode you can browse the Linux file system and control the machine.
+Assume we have a computer with graphical capabilities. We would like to use this computer as a medium to get access to a remote computer that is headless. If you have used putty in windows to open a secure SSH connection to a Linux machine, this is very similar to that. But instead of putty, we use VSCode. From VSCode you can browse the Linux file system and control the machine.
 One useful outcome is the ability to open a code, e.g. a python code in the VSCode and enjoy the available features to edit. If you have opened a python code in nano to edit, you know how awesome this could be.
 In addition, we can run a code in VSCode. We see the results in VSCode terminal but the cod is actually running on the remote Linux machine.
 Last but not least, we can debug a code. The code still runs in the remote Linux machine but we can put a breakpoints in the VSCode in the windows machine and see the variables, step through the lines of the codes, etc. 
 
-## Assumption
+## Assumptions
 - The local os is Windows 7
 - The remote machine is a Linux (Ubuntu 20.04) launched in VirtulBox as a VM (Virtual Machine) or an actual physical machine
 ## Dependencies on Linux 
@@ -19,9 +19,7 @@ check with:
 if not present, install with:  
 `ros@robotic:~$sudo apt install openssh-server`
 ## Dependencies on Windows
- - VSCode
- After installing this extension, a new status bar is added to the left bottom of the VSCode window.  
-![Extensions](images/ssh_icon.JPG)  
+- VSCode  
 - Install *git* for windows from [git download](https://git-scm.com/download/win)
 This is to allow VSCode to make an SSH connection to the remote machine.
 ## Preparations
@@ -72,13 +70,16 @@ After confirming that this host is legitimate, SSH connection is established. Af
 `$exit`   
 to close the connection. Now it is time to connect from VSCode.
 ### SSH from VSCode to Linux
-First we need to add the path of the SSH to the VSCode. 
+First, we install the *Remote Development* extension in the VSCode.
+As a result, five extensions are added to the VSCode. One of them is *Remote-SSH*. A button is added to the left bottom of the VSCode window that allows us to access the relevent item s in the Command Palette:   
+![Extensions](images/ssh_icon.JPG)   
+Second, we need to add the path of the SSH to the VSCode. 
 - Open the Command Palette (Ctrl+Shift+P)
 - Type `Open Settings (JSON)` and select it
 - In the opened json file add the path of the ssh.exe inside the git installation folder. For example:
 `"remote.SSH.path": "C:\\Program Files\\Git\\usr\\bin\\ssh.exe"`
 
-Second, we establish the ssh connection to the remote machine. 
+Third, we establish the ssh connection to the remote machine. 
 - Click on the ssh icon at the left bottom of the page to open the Command Palette. 
 - Select: `Reomote-SSH: Open Configuration File ...` and choose the one that is in the User folder.
 - Add the following lines to it and save it:
