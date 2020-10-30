@@ -20,7 +20,8 @@ if not present, install with:
 `ros@robotic:~$sudo apt install openssh-server`
 ## Dependencies on Windows
  - VSCode
- After installing this extension, a new status bar is added to the left bottom of the VSCode window.
+ After installing this extension, a new status bar is added to the left bottom of the VSCode window.  
+![Extensions](images/ssh_icon.JPG)  
 - Install *git* for windows from [git download](https://git-scm.com/download/win)
 This is to allow VSCode to make an SSH connection to the remote machine.
 ## Preparations
@@ -65,7 +66,7 @@ In the nano editor, you may see several lines. find the one that begins with the
 - Confirm the name.   
 - Exit by `Ctrl+x`  
 
-Now try to open an ssh connection again.  
+Now try to open an ssh connection again:  
 `$ssh ros@192.168.1.30`  
 After confirming that this host is legitimate, SSH connection is established. After entering the correct password, you can control the remote machine and browse the file system. Finally, use:   
 `$exit`   
@@ -89,29 +90,32 @@ Host ros@192.168.1.30
 ```
 - Click on the ssh icon at the left bottom of the page to open the Command Palette.  
 -  Select: `Reomote-SSH: Connect To Host...` and select the host that you just added above. 
-
+![Extensions](images/seelct_configured_host.JPG) 
 - It prompts you to enter the password. 
 - Hopefully! the SSH connection is established now.
 - When connection is successful, VSCode opens a new window to control the remote machine. So now you have two instances of the VSCode.
-- The ssh icon at the left bottom of the page, shows the status.
-
+- The ssh icon at the left bottom of the page, shows the status.  
+![Extensions](images/ssh_sts.JPG)  
 - From VSCode Terminal menu, open a terminal and browse the Linux file system.
 - To close, click on the ssh icon at the left bottom of the window to open the Command Palette. Then select Close Remote Connection.
 
 # Run and Debug code
 Assume we have a python code on the remote machine. We want to see the code in an editor. In the VSCode, install the *Python extension for Visual Studio Code* to be able to edit a python code and format it properly and run it and debug it.
 After installing the extension, we should see something similar to this:  
-![Extensions](images/local_extensions.JPG "Extensions")  
+![Extensions](images/local_extensions.JPG)  
 Please note that we intend to use the python interpreter located on the remote machine to run the code and debug it. In local machine, we just see the code and control the remote interpreter to run, debug, etc. 
 ## Open a python code
 - From VSCode connect to the remote machine as explained before.
 - Select the Explorer on the left side bar (Ctrl + Shift + E).
 - From file menu, select open folder.
-- Type the path to the desired folder and click Ok. Enter the password.
+- Type the path to the desired folder and click Ok.  
+![open](images/open_folder.JPG)     
+- Enter the password.
 - The folder is added in the Explorer pane. You can now select a file in it and open it in the editor.
 ## Run a python code
 While connected to the remote machine using SSH, we have to install the Python extension on the remote machine too. 
 - While connected, go to the Extensions pane (Ctrl+Shift+X) to see the list of available extensions on the local and remote machines. You will see that VSCode shows that the Python extension is available to install. 
+![Extensions](images/instal_python_remote_2.JPG)  
 - Select it and click on the `Install in SSH: 192.168.1.30` button.
 - Open a python code as explained earlier.
 - From Run menu, select *Run Without Debugging* (or press Ctrl + F5 ). As a result, the code should start running and the results should be printed in the terminal. 
