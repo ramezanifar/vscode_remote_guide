@@ -32,11 +32,11 @@ and in my case, it is going to echo `ros`.
 
 6. Next, we make sure Windows ssh connection to Linux is working finely. 
 ### SSH from Windows to Linux
-After installing git on windows, a terminal interface is added named Git Bash.  
-During installation,  the link to it might be added to the mouse right-click menu. You can also launch it from the installation folder. for example: `C:\Program Files\Git\git-bash.exe`
+After installing git on windows, a terminal interface is added named *Git Bash*.  
+During installation,  the link to it might be added to the mouse right-click menu. You can also launch it from the installation folder. For example `C:\Program Files\Git\git-bash.exe`  
 In the Git Bash terminal type:  
 `$ssh ros@192.168.1.30`  
-in order to open an SSH connection to the Linux machine.   
+in order to open an SSH connection to the Linux machine. If connection was successful, skip the following lines and go to the next section.
 If it failed with this message:
 ```
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
