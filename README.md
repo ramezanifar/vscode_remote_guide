@@ -123,7 +123,7 @@ Third, we establish the ssh connection to the remote machine.
 - Hopefully! the SSH connection is established now.
 - When connection is successful, VSCode opens a new window to control the remote machine. So now you have two instances of the VSCode.
 - The ssh icon at the left bottom of the page, shows the status.  
-![Extensions](images/ssh_sts.JPG)  
+![Extensions](images/ssh_sts_2.JPG)  
 - It also shows the linux as the platform is added to the settings.
 ![Extensions](images/linux_platform.JPG)  
 - From VSCode Terminal menu, open a terminal and browse the Linux file system.
