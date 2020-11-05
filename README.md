@@ -95,7 +95,7 @@ HOST ubuntu
     User ros
     Port 22
    
-  HOST docker
+HOST docker
     HostName 192.168.1.30
     User root
     Port 32768
