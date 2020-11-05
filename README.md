@@ -79,18 +79,18 @@ Follow theses steps to create a config file for SSH:
  3. Open the config file in an editor, e.g. `$nano config`
  4. Add the necessary settings for each SSH connection. Here is an example:
  ```
- HOST my_remote_machine
+ HOST ubuntu
     HostName 192.168.1.30
     User ros
     Port 22
  ```
 5. Save and exit the editor. 
 6. When we want to SSH to the target, we use the name defined in `HOST`  in the config file. For example, in order to SSH to the target defined in the above example, simply use:  
-``$ssh my_remote_machine``  
+``$ssh ubuntu``  
 
 Here is an example of a config file with two HOST names:
 ```
-HOST my_remote_machine
+HOST ubuntu
     HostName 192.168.1.30
     User ros
     Port 22
@@ -115,9 +115,11 @@ Second, we need to add the path of the SSH to the VSCode.
 Third, we establish the ssh connection to the remote machine. 
 - Click on the ssh icon at the left bottom of the page to open the Command Palette. 
 - Select: `Reomote-SSH: Connect to Host...`  
-- Type the name of the desired HOST that you specified in the SSH config file (See the section **SSH config file** for details). 
+- Type the name of the desired HOST that you specified in the SSH config file. See the section **SSH config file** for details. In our example just type *ubuntu*.   
+**Note:** Do not use *ssh ubuntu*  
+- It asks you to seelct the platform (Linux, Windows, macOS)  
+![Extensions](images/select_platform.png)  
 - It prompts you to enter the password. 
-- It asks you to define the platform (Windows, Linux , Mac)
 - Hopefully! the SSH connection is established now.
 - When connection is successful, VSCode opens a new window to control the remote machine. So now you have two instances of the VSCode.
 - The ssh icon at the left bottom of the page, shows the status.  
@@ -125,7 +127,10 @@ Third, we establish the ssh connection to the remote machine.
 - It also shows the linux as the platform is added to the settings.
 ![Extensions](images/linux_platform.JPG)  
 - From VSCode Terminal menu, open a terminal and browse the Linux file system.
-- To close, click on the ssh icon at the left bottom of the window to open the Command Palette. Then select Close Remote Connection.
+- To close, click on the ssh icon at the left bottom of the window to open the Command Palette. Then select Close Remote Connection.  
+# Connection failure
+If you faced any issue connecting from VSCode, try to use Git Bash. That must work before you can use VSCode. 
+When connection is unsuccessful, some useful error messages are echoed in the OUTPUT pane in VSCode (down the page there are three tabs: TERMINAL, PROBLEM, OUTPUT). 
 
 # Run and Debug code
 Assume we have a python code on the remote machine. We want to see the code in an editor. In the VSCode, install the *Python extension for Visual Studio Code* to be able to edit a python code and format it properly and run it and debug it.
