@@ -129,8 +129,8 @@ Third, we establish the ssh connection to the remote machine.
 - From VSCode Terminal menu, open a terminal and browse the Linux file system.
 - To close, click on the ssh icon at the left bottom of the window to open the Command Palette. Then select Close Remote Connection.  
 # Connection failure
-If you faced any issue connecting from VSCode, try to use Git Bash. That must work before you can use VSCode. 
-When connection is unsuccessful, some useful error messages are echoed in the OUTPUT pane in VSCode (down the page there are three tabs: TERMINAL, PROBLEM, OUTPUT). 
+If you faced any issue connecting from VSCode, try to use Git Bash. If by using Git Bash connection is still unsuccessful, check the SSH config. 
+In VSCode when connection is unsuccessful, some useful error messages are echoed in the OUTPUT pane in VSCode (down the page there are three tabs: TERMINAL, PROBLEM, OUTPUT). 
 
 # Run and Debug code
 Assume we have a python code on the remote machine. We want to see the code in an editor. In the VSCode, install the *Python extension for Visual Studio Code* to be able to edit a python code and format it properly and run it and debug it.
@@ -162,4 +162,7 @@ If set properly, the code stops at the break point. Now you can do you debugging
 Also next to the Terminal, you can use the Debug Console to read and manipulate the variables.
 
 # Reference
-[Microsoft tutorials](https://code.visualstudio.com/docs/remote/ssh)
+[Remote Development using SSH](https://code.visualstudio.com/docs/remote/ssh)
+[Remote SSH: Tips and Tricks](https://code.visualstudio.com/blogs/2019/10/03/remote-ssh-tips-and-tricks)
+[Using the SSH Config File](https://linuxize.com/post/using-the-ssh-config-file/)
+
