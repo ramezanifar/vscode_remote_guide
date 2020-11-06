@@ -162,7 +162,7 @@ If set properly, the code stops at the break point. Now you can do you debugging
 Also next to the Terminal, you can use the Debug Console to read and manipulate the variables.
 
 # Reference
-[Remote Development using SSH](https://code.visualstudio.com/docs/remote/ssh)
-[Remote SSH: Tips and Tricks](https://code.visualstudio.com/blogs/2019/10/03/remote-ssh-tips-and-tricks)
-[Using the SSH Config File](https://linuxize.com/post/using-the-ssh-config-file/)
+[Remote Development using SSH](https://code.visualstudio.com/docs/remote/ssh)  
+[Remote SSH: Tips and Tricks](https://code.visualstudio.com/blogs/2019/10/03/remote-ssh-tips-and-tricks)  
+[Using the SSH Config File](https://linuxize.com/post/using-the-ssh-config-file/)  
 
