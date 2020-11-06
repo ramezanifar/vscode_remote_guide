@@ -129,7 +129,7 @@ Third, we establish the ssh connection to the remote machine.
 - From VSCode Terminal menu, open a terminal and browse the Linux file system.
 - To close, click on the ssh icon at the left bottom of the window to open the Command Palette. Then select Close Remote Connection.  
 # Connection failure
-If you faced any issue connecting from VSCode, try to use Git Bash. If by using Git Bash connection is still unsuccessful, check the SSH config. 
+If you faced any issue connecting from VSCode, try to test the connectivity by Git Bash. If by using Git Bash connection is still unsuccessful, check the content of the SSH config. Please note that Git Bash does not need to be running and connected to the remote machine in the background while you are using the VSCode. This is just to test the basic requirments are met.
 In VSCode when connection is unsuccessful, some useful error messages are echoed in the OUTPUT pane in VSCode (down the page there are three tabs: TERMINAL, PROBLEM, OUTPUT). 
 
 # Run and Debug code
