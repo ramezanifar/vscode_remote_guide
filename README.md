@@ -10,7 +10,7 @@ In addition, we can run a code in VSCode. We see the results in VSCode terminal 
 Last but not least, we can debug a code. The code still runs in the remote Linux machine but we can put a breakpoints in the VSCode in the windows machine and see the variables, step through the lines of the codes, etc. 
 
 ## Assumptions
-- The local os is Windows 7
+- The local os is Windows 7 or Windows 10
 - The remote machine is a Linux (Ubuntu 20.04) launched in VirtulBox as a VM (Virtual Machine) or an actual physical machine
 ## Dependencies on Linux 
 Make sure the open-ssh is installed.  
@@ -22,7 +22,7 @@ if not present, install with:
 - VSCode  
 - Install *git* for windows from [git download](https://git-scm.com/download/win)
 This is to allow VSCode to make an SSH connection to the remote machine.  
-**Note:** This is needed for Windows 7. Windows 10 has ssh capability in its nature.
+**Note:** This is needed for Windows 7. Windows 10 can have ssh capability by means of WSL (windows subsystem for linux). If you don't want to use WSL, you can install Git in Windows 10.
 ## Preparations
 1. Make sure the Linux machine is running.
 2. Make sure the network between Windows machine and Linux machine is set properly. For example use proper static IP addresses for the Ethernet adapters and try to ping one from the other.
@@ -56,9 +56,9 @@ Host key verification failed.
 ```
 that means, you have tried to connect to another SSH server with the same IP and user before and the host verification failed because this is not the one you connected earlier. This happens for me because I have several VirtualBox images and all have the same IP and user and I switch between them from time to time.   
 For remedy, we need to delete the existing key. In the warning shown above, the address of the file containing the host keys is given. In the Git Bash terminal, change the directory to:  
-`$cd /h/.ssh`
+`$cd ~/.ssh`
 And edit the file known_hosts by nano:  
-`$nano /h/.ssh`  
+`$nano known_hosts`  
 In the nano editor, you may see several lines. find the one that begins with the remote IP address, in my case with `192.168.1.30` and delete the line:  
 - To delete a line, move to beginning of line, then press `Ctrl-k`.   
 - Save the file by `Ctrl-o`.   
@@ -74,7 +74,7 @@ to close the connection.
 Later we will use the VSCode to SSH into the remote machine and it uses the git SSH under the hood. For Windows 7, we have to define the details of the SSH session such as user, IP, port, etc. in a config file in Git Bash. Even though VSCode has a configuration file too, but it does not work for Windows 7. Another advantage of the config file is that we can define multiple SSH sessions and just use one of them by name and quickly establish the connection. 
 Follow theses steps to create a config file for SSH:
 
- 1. In Git bash terminal change the directory to `.git` which is in `home`  i.e. `$cd ~/.ssh`
+ 1. In Git bash terminal change the directory to `.ssh` which is in `home`  i.e. `$cd ~/.ssh`
  2. Create a config file with `$touch config`
  3. Open the config file in an editor, e.g. `$nano config`
  4. Add the necessary settings for each SSH connection. Here is an example:
