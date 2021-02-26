@@ -20,9 +20,10 @@ if not present, install with:
 `ros@robotic:~$sudo apt install openssh-server`
 ## Dependencies on Windows
 - VSCode  
-- Install *git* for windows from [git download](https://git-scm.com/download/win)
+- *Remote-SSH* extension in VSCode
+- Install *git* for windows from [git download](https://git-scm.com/download/win)  
 This is to allow VSCode to make an SSH connection to the remote machine.  
-**Note:** This is needed for Windows 7. Windows 10 can have ssh capability by means of WSL (windows subsystem for linux). If you don't want to use WSL, you can install Git in Windows 10.
+**Note:** This is needed for Windows 7. Windows 10 can have ssh capability by means of WSL (windows subsystem for linux). If you don't want to use WSL, you can install Git on Windows 10.  
 ## Preparations
 1. Make sure the Linux machine is running.
 2. Make sure the network between Windows machine and Linux machine is set properly. For example use proper static IP addresses for the Ethernet adapters and try to ping one from the other.
@@ -103,8 +104,8 @@ HOST docker
 
 
 ### SSH from VSCode to Linux
-First, we install the *Remote Development* extension in the VSCode.
-As a result, five extensions are added to the VSCode. One of them is *Remote-SSH*. A button is added to the left bottom of the VSCode window that allows us to access the relevent items in the Command Palette:   
+As stated in **Dependencies on Windowss**, the *Remote-SSH* extension should be installed in VSCode. We can also install the *Remote Development* extension.
+As a result, five extensions are added to the VSCode and one of them is *Remote-SSH*. A button is added to the left bottom of the VSCode window that allows us to access the relevent items in the Command Palette:   
 ![Extensions](images/ssh_icon.JPG)   
 Second, we need to add the path of the SSH to the VSCode. 
 - Open the Command Palette (Ctrl+Shift+P)
