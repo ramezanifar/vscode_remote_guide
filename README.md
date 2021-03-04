@@ -138,12 +138,12 @@ When you start an ssh connection for the first time, VSCode tries to install a p
 ![Extensions](images/error_download.JPG)  
 If you close this window (by pressing the x), in the output window you will see some error messages indicating that VSCode attempted to download and install vscode-server.   
 ![Extensions](images/download_notification_1.JPG)  
-In case internet is not accessible, there is a way to download tha vscode_server and install it manually [See reference vscode-server]. Here we show how to do that.   
+In case internet is not accessible, there is a way to download tha vscode-server and install it manually [See reference vscode-server]. Here we show how to do that.   
 1- In the output window search for a "commit id". (See the picture above):  
-2- Download vscode-server from url https://update.code.visualstudio.com/commit:${commit_id}/server-linux-x64/stable by replacing the comit_id with whatyou obtained in output window. For this example it is:  
+2- Download vscode-server from url https://update.code.visualstudio.com/commit:${commit_id}/server-linux-x64/stable by replacing the comit_id with what you obtained in the output window. For this example it is:  
 https://update.code.visualstudio.com/commit:622cb03f7e070a9670c94bae1a45d78d7181fbd4/server-linux-x64/stable  
 3- Upload the vscode-server-linux-x64.tar.gz to server  
-4- Create a directory for the vscode_server as following:  
+4- Create a directory for the vscode-server as following:  
 ```$commit_id=f06011ac164ae4dc8e753a3fe7f9549844d15e35```  
 ```$mkdir -p ~/.vscode-server/bin/${commit_id}```  
 5- Unzip the downloaded vscode-server-linux-x64.tar.gz in the above directory. For example:    
