@@ -147,7 +147,7 @@ https://update.code.visualstudio.com/commit:622cb03f7e070a9670c94bae1a45d78d7181
 ```$commit_id=f06011ac164ae4dc8e753a3fe7f9549844d15e35```  
 ```$mkdir -p ~/.vscode-server/bin/${commit_id}```  
 5- Unzip the downloaded vscode-server-linux-x64.tar.gz in the above directory. For example:    
-```$tar zxvf /tmp/vscode-server-linux-x64.tar.gz -C ~/.vscode-server/bin/${commit_id} --strip 1 ```  
+```$tar zxvf vscode-server-linux-x64.tar.gz -C ~/.vscode-server/bin/${commit_id} --strip 1 ```  
 6- Create an empty file with name 0 under ~/.vscode-server/bin/${commit_id} as following:  
 ```$touch ~/.vscode-server/bin/${commit_id}/0```  
 
