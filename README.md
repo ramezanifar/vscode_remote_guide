@@ -101,7 +101,8 @@ HOST docker
     User root
     Port 32768
 ```
-
+### Always test ssh 
+Try to test the connectivity by Git Bash first. If by using Git Bash connection is still unsuccessful, check the content of the SSH config. Please note that Git Bash does not need to be running and connected to the remote machine in the background while you are using the VSCode. This is just to test that the basic requirments are met.
 
 ### SSH from VSCode to Linux
 As stated in **Dependencies on Windows**, the *Remote-SSH* extension should be installed in VSCode. We can also install the *Remote Development* extension.
@@ -130,13 +131,31 @@ Third, we establish the ssh connection to the remote machine.
 - From VSCode Terminal menu, open a terminal and browse the Linux file system.
 - To close, click on the ssh icon at the left bottom of the window to open the Command Palette. Then select Close Remote Connection.  
 # Connection failure
-If you faced any issue connecting from VSCode, try to test the connectivity by Git Bash. If by using Git Bash connection is still unsuccessful, check the content of the SSH config. Please note that Git Bash does not need to be running and connected to the remote machine in the background while you are using the VSCode. This is just to test that the basic requirments are met.   
-In VSCode when connection is unsuccessful, some useful error messages are echoed in the OUTPUT pane in VSCode (down the page there are three tabs: TERMINAL, PROBLEM, OUTPUT). 
+In VSCode when connection is unsuccessful, an alarm message is show. If you close it, some useful error messages are echoed in the OUTPUT pane in VSCode (down the page there are three tabs: TERMINAL, PROBLEM, OUTPUT). By reading the error messages you can figure out what wrong is. Read the following for an example.
+
+## vscode_server 
+When you start an ssh connection for the first time, VSCode tries to install a package on the remote machine named vscode-server. That means the remote machine should have internet access. Otherwise it failes and you get an error like:  
+![Extensions](images/error_download.JPG)  
+If you close this window (by pressing the x), in the output window you will see some error messages indicating that VSCode attempted to download and install vscode-server.   
+![Extensions](images/download_notification_1.JPG)  
+In case internet is not accessible, there is a way to download tha vscode_server and install it manually [See reference vscode-server]. Here we show how to do that.   
+1- In the output window search for a "commit id". (See the picture above):  
+2- Download vscode-server from url https://update.code.visualstudio.com/commit:${commit_id}/server-linux-x64/stable by replacing the comit_id with whatyou obtained in output window. For this example it is:  
+https://update.code.visualstudio.com/commit:622cb03f7e070a9670c94bae1a45d78d7181fbd4/server-linux-x64/stable  
+3- Upload the vscode-server-linux-x64.tar.gz to server  
+4- Create a directory for the vscode_server as following:  
+```$commit_id=f06011ac164ae4dc8e753a3fe7f9549844d15e35```  
+```$mkdir -p ~/.vscode-server/bin/${commit_id}```  
+5- Unzip the downloaded vscode-server-linux-x64.tar.gz in the above directory. For example:    
+```$tar zxvf /tmp/vscode-server-linux-x64.tar.gz -C ~/.vscode-server/bin/${commit_id} --strip 1 ```  
+6- Create 0 file under ~/.vscode-server/bin/${commit_id} as following:  
+```$touch ~/.vscode-server/bin/${commit_id}/0```  
+
 
 # Run and Debug code
 Assume we have a python code on the remote machine. We want to see the code in an editor. In the VSCode, install the *Python extension for Visual Studio Code* to be able to edit a python code and format it properly and run it and debug it.
-After installing the extension, we should see something similar to this:  
-![Extensions](images/local_extensions.JPG)  
+After installing the extension, we should see something similar to this:     
+![Extensions](images/local_extensions.JPG)   
 Please note that we intend to use the python interpreter located on the remote machine to run the code and debug it. In local machine, we just see the code and control the remote interpreter to run, debug, etc. 
 ## Open a python code
 - From VSCode connect to the remote machine as explained before.
@@ -166,4 +185,4 @@ Also next to the Terminal, you can use the Debug Console to read and manipulate 
 [Remote Development using SSH](https://code.visualstudio.com/docs/remote/ssh)  
 [Remote SSH: Tips and Tricks](https://code.visualstudio.com/blogs/2019/10/03/remote-ssh-tips-and-tricks)  
 [Using the SSH Config File](https://linuxize.com/post/using-the-ssh-config-file/)  
-
+[vscode-server](https://stackoverflow.com/a/57601121/11845240)  
