@@ -131,7 +131,7 @@ Third, we establish the ssh connection to the remote machine.
 - From VSCode Terminal menu, open a terminal and browse the Linux file system.
 - To close, click on the ssh icon at the left bottom of the window to open the Command Palette. Then select Close Remote Connection.  
 # Connection failure
-In VSCode when connection is unsuccessful, an alarm message is show. If you close it, some useful error messages are echoed in the OUTPUT pane in VSCode (down the page there are three tabs: TERMINAL, PROBLEM, OUTPUT). By reading the error messages you can figure out what wrong is. Read the following for an example.
+When connection is unsuccessful, an alarm message is shown. If you close it, some useful error messages are echoed in the OUTPUT pane in VSCode (down the page there are three tabs: TERMINAL, PROBLEM, OUTPUT). By reading the error messages you can figure out what wrong is. Read the following for an example.
 
 ## vscode_server 
 When you start an ssh connection for the first time, VSCode tries to install a package on the remote machine named vscode-server. That means the remote machine should have internet access. Otherwise it failes and you get an error like:  
