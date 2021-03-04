@@ -122,7 +122,7 @@ Third, we establish the ssh connection to the remote machine.
 - It asks you to seelct the platform (Linux, Windows, macOS)  
 ![Extensions](images/select_platform.png)  
 - It prompts you to enter the password. 
-- Hopefully! the SSH connection is established now.
+- Hopefully! the SSH connection is established now. If it failed, read the next section for some tips.
 - When connection is successful, VSCode opens a new window to control the remote machine. So now you have two instances of the VSCode.
 - The ssh icon at the left bottom of the page, shows the status.  
 ![Extensions](images/ssh_sts_2.JPG)  
