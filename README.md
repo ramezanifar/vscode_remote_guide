@@ -131,7 +131,7 @@ Third, we establish the ssh connection to the remote machine.
 - From VSCode Terminal menu, open a terminal and browse the Linux file system.
 - To close, click on the ssh icon at the left bottom of the window to open the Command Palette. Then select Close Remote Connection.  
 # Connection failure
-When connection is unsuccessful, an alarm message is shown. If you close it, some useful error messages are echoed in the OUTPUT pane in VSCode (down the page there are three tabs: TERMINAL, PROBLEM, OUTPUT). By reading the error messages you can figure out what wrong is. Read the following for an example.
+When connection is unsuccessful, an alarm message is shown. If you close it, some useful messages are printed in the OUTPUT window in VSCode (down the page there are three tabs: TERMINAL, PROBLEM, OUTPUT). By reading those messages you can figure out what wrong is. Read the following section for an example.
 
 ## vscode_server 
 When you start an ssh connection for the first time, VSCode tries to install a package on the remote machine named vscode-server. That means the remote machine should have internet access. Otherwise it failes and you get an error like:  
@@ -142,13 +142,15 @@ In case internet is not accessible, there is a way to download tha vscode-server
 1- In the output window search for a "commit id". (See the picture above):  
 2- Download vscode-server from url https://update.code.visualstudio.com/commit:${commit_id}/server-linux-x64/stable by replacing the comit_id with what you obtained in the output window. For this example it is:  
 https://update.code.visualstudio.com/commit:622cb03f7e070a9670c94bae1a45d78d7181fbd4/server-linux-x64/stable  
-3- Upload the vscode-server-linux-x64.tar.gz to server  
-4- Create a directory for the vscode-server as following:  
-```$commit_id=f06011ac164ae4dc8e753a3fe7f9549844d15e35```  
+3- Upload the vscode-server-linux-x64.tar.gz to the server.
+4- Open a terminal in the directory where the package is (or anywhere).
+5- Declare a variable in the terminal to use it in other commands: 
+```$commit_id=622cb03f7e070a9670c94bae1a45d78d7181fbd4```  
+6- Create a directory for the vscode-server as following:  
 ```$mkdir -p ~/.vscode-server/bin/${commit_id}```  
-5- Unzip the downloaded vscode-server-linux-x64.tar.gz in the above directory. For example:    
+7- Unzip the downloaded vscode-server-linux-x64.tar.gz in the above directory. For example:    
 ```$tar zxvf vscode-server-linux-x64.tar.gz -C ~/.vscode-server/bin/${commit_id} --strip 1 ```  
-6- Create an empty file with name 0 under ~/.vscode-server/bin/${commit_id} as following:  
+8- Create an empty file with the name 0 under ~/.vscode-server/bin/${commit_id} as following:  
 ```$touch ~/.vscode-server/bin/${commit_id}/0```  
 
 
