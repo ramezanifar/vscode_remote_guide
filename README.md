@@ -106,7 +106,7 @@ Try to test the connectivity by Git Bash first. If by using Git Bash connection 
 
 ### SSH from VSCode to Linux
 As stated in **Dependencies on Windows**, the *Remote-SSH* extension should be installed in VSCode. We can also install the *Remote Development* extension.
-As a result, five extensions are added to the VSCode and one of them is *Remote-SSH*. A button is added to the left bottom of the VSCode window that allows us to access the relevent items in the Command Palette:   
+As a result, three extensions are added to the VSCode and one of them is *Remote-SSH*. A button is added to the left bottom of the VSCode window that allows us to access the relevent items in the Command Palette:   
 ![Extensions](images/ssh_icon.JPG)   
 Second, we need to add the path of the SSH to the VSCode. 
 - Open the Command Palette (Ctrl+Shift+P)
