@@ -101,7 +101,7 @@ Host docker
     User root
     Port 32768
 ```
-See reference [Using the SSH Config File](#reference)
+See the reference [Using the SSH Config File](#reference).
 ### Always test ssh 
 Try to test the connectivity by Git Bash first. If by using Git Bash connection is still unsuccessful, check the content of the SSH config. Please note that Git Bash does not need to be running and connected to the remote machine in the background while you are using the VSCode. This is just to test that the basic requirments are met.
 
@@ -139,7 +139,7 @@ When you start an ssh connection for the first time, VSCode tries to install a p
 ![Extensions](images/error_download.JPG)  
 If you close this window (by pressing the x), in the output window you will see some error messages indicating that VSCode attempted to download and install vscode-server.   
 ![Extensions](images/download_notification_1.JPG)  
-In case internet is not accessible, there is a way to download the vscode-server and install it manually [See reference vscode-server]. Here we show how to do that.   
+In case internet is not accessible, there is a way to download the vscode-server and install it manually [See the reference vscode-server](#reference). Here we show how to do that.   
 1- In the output window search for a "commit id". (See the picture above):  
 2- Download vscode-server from url https://update.code.visualstudio.com/commit:${commit_id}/server-linux-x64/stable by replacing the comit_id with what you obtained in the output window. For this example it is:  
 https://update.code.visualstudio.com/commit:622cb03f7e070a9670c94bae1a45d78d7181fbd4/server-linux-x64/stable  
