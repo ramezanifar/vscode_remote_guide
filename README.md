@@ -80,7 +80,7 @@ Follow theses steps to create a config file for SSH:
  3. Open the config file in an editor, e.g. `$nano config`
  4. Add the necessary settings for each SSH connection. Here is an example:
  ```
- HOST ubuntu
+ Host ubuntu
     HostName 192.168.1.30
     User ros
     Port 22
@@ -91,16 +91,17 @@ Follow theses steps to create a config file for SSH:
 
 Here is an example of a config file with two HOST names:
 ```
-HOST ubuntu
+Host ubuntu
     HostName 192.168.1.30
     User ros
     Port 22
    
-HOST docker
+Host docker
     HostName 192.168.1.30
     User root
     Port 32768
 ```
+See reference [Using the SSH Config File](#reference)
 ### Always test ssh 
 Try to test the connectivity by Git Bash first. If by using Git Bash connection is still unsuccessful, check the content of the SSH config. Please note that Git Bash does not need to be running and connected to the remote machine in the background while you are using the VSCode. This is just to test that the basic requirments are met.
 
@@ -187,4 +188,5 @@ Also next to the Terminal, you can use the Debug Console to read and manipulate 
 [Remote Development using SSH](https://code.visualstudio.com/docs/remote/ssh)  
 [Remote SSH: Tips and Tricks](https://code.visualstudio.com/blogs/2019/10/03/remote-ssh-tips-and-tricks)  
 [Using the SSH Config File](https://linuxize.com/post/using-the-ssh-config-file/)  
-[vscode-server](https://stackoverflow.com/a/57601121/11845240)  
+[vscode-server](https://stackoverflow.com/a/57601121/11845240) 
+[Using the SSH Config File](https://linuxize.com/post/using-the-ssh-config-file/)
