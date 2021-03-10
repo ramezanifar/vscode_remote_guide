@@ -188,5 +188,5 @@ Also next to the Terminal, you can use the Debug Console to read and manipulate 
 [Remote Development using SSH](https://code.visualstudio.com/docs/remote/ssh)  
 [Remote SSH: Tips and Tricks](https://code.visualstudio.com/blogs/2019/10/03/remote-ssh-tips-and-tricks)  
 [Using the SSH Config File](https://linuxize.com/post/using-the-ssh-config-file/)  
-[vscode-server](https://stackoverflow.com/a/57601121/11845240) 
+[vscode-server](https://stackoverflow.com/a/57601121/11845240)   
 [Using the SSH Config File](https://linuxize.com/post/using-the-ssh-config-file/)
