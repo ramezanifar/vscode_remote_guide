@@ -6,7 +6,7 @@ Using VSCode to for remote support
 ## Intruduction
 Assume we have a computer with graphical capabilities. We would like to use this computer as a medium to get access to a remote computer that is headless. If you have used putty in windows to open a secure SSH connection to a Linux machine, this is very similar to that. But instead of putty, we use VSCode. From VSCode you can browse the Linux file system and control the machine.
 One useful outcome is the ability to open a code, e.g. a python code in the VSCode and enjoy the available features to edit. If you have opened a python code in nano to edit, you know how awesome this could be.
-In addition, we can run a code in VSCode. We see the results in VSCode terminal but the cod is actually running on the remote Linux machine.
+In addition, we can run a code in VSCode. We see the results in VSCode terminal but the code is actually running on the remote Linux machine.
 Last but not least, we can debug a code. The code still runs in the remote Linux machine but we can put a breakpoints in the VSCode in the windows machine and see the variables, step through the lines of the codes, etc. 
 
 ## Assumptions
