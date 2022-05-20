@@ -136,9 +136,9 @@ When connection is unsuccessful, an alarm message is shown. If you close it, som
 
 ## vscode_server 
 When you start an ssh connection for the first time, VSCode tries to install a package on the remote machine named vscode-server. That means the remote machine should have internet access. Otherwise it failes and you get an error like:  
-![Extensions](images/error_download.JPG)  
+![Download_Error](images/error_download.JPG)  
 If you close this window (by pressing the x), in the output window you will see some error messages indicating that VSCode attempted to download and install vscode-server.   
-![Extensions](images/download_notification_1.JPG)  
+![Download_Notification](images/download_notification_1.JPG)  
 In case internet is not accessible, there is a way to download the vscode-server and install it manually. See the reference [vscode-server](#reference). Here we show how to do that.   
 1- In the output window search for a "commit id". (See the picture above):  
 2- Download vscode-server from url https://update.code.visualstudio.com/commit:${commit_id}/server-linux-x64/stable by replacing the comit_id with what you obtained in the output window. For this example it is:  
