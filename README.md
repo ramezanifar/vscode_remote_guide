@@ -151,9 +151,9 @@ In case internet is not accessible, there is a way to download the vscode-server
 1- In the output window search for a "commit id". (See the picture above):  
 2- Download vscode-server from url https://update.code.visualstudio.com/commit:${commit_id}/server-linux-x64/stable by replacing the comit_id with what you obtained in the output window. For this example it is:  
 https://update.code.visualstudio.com/commit:622cb03f7e070a9670c94bae1a45d78d7181fbd4/server-linux-x64/stable  
-3- Upload the vscode-server-linux-x64.tar.gz to the server.
-4- Open a terminal in the directory where the package is (or anywhere).
-5- Declare a variable in the terminal to use it in other commands: 
+3- Upload the vscode-server-linux-x64.tar.gz to the server.  
+4- Open a terminal in the directory where the package is (or anywhere).  
+5- Declare a variable in the terminal to use it in other commands:   
 ```$commit_id=622cb03f7e070a9670c94bae1a45d78d7181fbd4```  
 6- Create a directory for the vscode-server as following:  
 ```$mkdir -p ~/.vscode-server/bin/${commit_id}```  
@@ -164,7 +164,7 @@ https://update.code.visualstudio.com/commit:622cb03f7e070a9670c94bae1a45d78d7181
 
 
 # Run and Debug code
-Assume we have a python code on the remote machine. We want to see the code in an editor. In the VSCode, install the *Python extension for Visual Studio Code* to be able to edit a python code and format it properly and run it and debug it.
+Assume we have a python code on the remote machine. We want to see the code in an editor. In the VSCode window that shows you are connected to the remote Linux server, go to the **Extensions** page and install the *Python extension for Visual Studio Code* to be able to edit a python code and format it properly and run it and debug it.
 After installing the extension, we should see something similar to this:     
 ![Proper_Installation](images/local_extensions.JPG)   
 Please note that we intend to use the python interpreter located on the remote machine to run the code and debug it. In local machine, we just see the code and control the remote interpreter to run, debug, etc. 
